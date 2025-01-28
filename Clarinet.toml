@@ -5,7 +5,20 @@ authors = []
 telemetry = true
 cache_dir = './.cache'
 requirements = []
+[contracts.air-quality-reports]
+path = 'contracts/air-quality-reports.clar'
+clarity_version = 2
+epoch = 2.5
 
+[contracts.incentive-system]
+path = 'contracts/incentive-system.clar'
+clarity_version = 2
+epoch = 2.5
+
+[contracts.sensor-registry]
+path = 'contracts/sensor-registry.clar'
+clarity_version = 2
+epoch = 2.5
 [repl.analysis]
 passes = ['check_checker']
 
