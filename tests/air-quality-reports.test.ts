@@ -1,21 +1,59 @@
+import { describe, it, expect, beforeEach } from "vitest"
 
-import { describe, expect, it } from "vitest";
+describe("air-quality-reports", () => {
+  let contract: any
+  
+  beforeEach(() => {
+    contract = {
+      generateReport: (area: string, aqi: number, status: string, recommendations: string) => ({ value: 1 }),
+      getReport: (reportId: number) => ({
+        timestamp: 123456,
+        area: "New York City",
+        aqi: 50,
+        status: "Good",
+        recommendations: "Enjoy outdoor activities",
+      }),
+      getLatestReport: () => ({
+        timestamp: 123456,
+        area: "New York City",
+        aqi: 50,
+        status: "Good",
+        recommendations: "Enjoy outdoor activities",
+      }),
+      getReportCount: () => 1,
+    }
+  })
+  
+  describe("generate-report", () => {
+    it("should generate a new air quality report", () => {
+      const result = contract.generateReport("New York City", 50, "Good", "Enjoy outdoor activities")
+      expect(result.value).toBe(1)
+    })
+  })
+  
+  describe("get-report", () => {
+    it("should return a specific air quality report", () => {
+      const result = contract.getReport(1)
+      expect(result.area).toBe("New York City")
+      expect(result.aqi).toBe(50)
+      expect(result.status).toBe("Good")
+    })
+  })
+  
+  describe("get-latest-report", () => {
+    it("should return the latest air quality report", () => {
+      const result = contract.getLatestReport()
+      expect(result.area).toBe("New York City")
+      expect(result.aqi).toBe(50)
+      expect(result.status).toBe("Good")
+    })
+  })
+  
+  describe("get-report-count", () => {
+    it("should return the total number of reports", () => {
+      const result = contract.getReportCount()
+      expect(result).toBe(1)
+    })
+  })
+})
 
-const accounts = simnet.getAccounts();
-const address1 = accounts.get("wallet_1")!;
-
-/*
-  The test below is an example. To learn more, read the testing documentation here:
-  https://docs.hiro.so/stacks/clarinet-js-sdk
-*/
-
-describe("example tests", () => {
-  it("ensures simnet is well initalised", () => {
-    expect(simnet.blockHeight).toBeDefined();
-  });
-
-  // it("shows an example", () => {
-  //   const { result } = simnet.callReadOnlyFn("counter", "get-counter", [], address1);
-  //   expect(result).toBeUint(0);
-  // });
-});

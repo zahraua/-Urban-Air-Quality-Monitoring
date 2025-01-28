@@ -15,3 +15,5 @@ M
 tests/sensor-registry.test.ts,5/a/5af1611898f11f3e3a84aa5ce0ddf7aa8dc8b5fa
 R
 "contracts/air-quality-reports.clar,7/8/7825fb33a4cc67460fa41afe30237fe69f607b51
+Q
+!tests/air-quality-reports.test.ts,e/b/eb6915af86df7d80b2858f586b3f61e07069a363
