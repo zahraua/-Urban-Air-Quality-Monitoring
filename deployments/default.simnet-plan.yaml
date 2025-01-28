@@ -54,4 +54,9 @@ plan:
             emulated-sender: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM
             path: contracts/incentive-system.clar
             clarity-version: 2
+        - emulated-contract-publish:
+            contract-name: sensor-registry
+            emulated-sender: ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM
+            path: contracts/sensor-registry.clar
+            clarity-version: 2
       epoch: "2.5"
