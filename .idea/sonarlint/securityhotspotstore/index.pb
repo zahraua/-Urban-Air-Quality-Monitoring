@@ -9,3 +9,5 @@ O
 contracts/incentive-system.clar,c/2/c2980c62bbdbbb6cdfd2b13a125367569537a101
 N
 tests/incentive-system.test.ts,4/f/4f239593b0ea7d132d129c74e9c010a97dee42ba
+N
+contracts/sensor-registry.clar,e/3/e341af2c3bffb82a79afb2ceb69860d48c5da312
